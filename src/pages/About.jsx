@@ -9,6 +9,7 @@ import arrowIcon from "../assets/images/icon-bullet-point.svg";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 import Footer from "../components/CTA";
 import BorderWrapper from "../components/BorderWrapper";
+import { useState } from "react";
 
 const aboutSections = [
   {
@@ -71,6 +72,7 @@ export default function About() {
 }
 
 function HeroSection() {
+  const [isLoaded, setIsLoaded] = useState(false);
   return (
     <BorderWrapper>
       <TwoSectionsBox>
@@ -93,7 +95,12 @@ function HeroSection() {
         <div className="flex-1/2">
           <picture>
             <source media="(width >= 768px)" srcSet={ImgHeroLarge} />
-            <img style={{ animationDelay: "0.1s" }} src={ImgHero} className="animate-zoomIn rounded-2xl" />
+            <img
+              onLoad={() => setIsLoaded(true)}
+              style={{ animationDelay: "0.1s" }}
+              src={ImgHero}
+              className={`${isLoaded ? "animate-zoomIn" : "opacity-0"} rounded-2xl`}
+            />
           </picture>
         </div>
       </TwoSectionsBox>
