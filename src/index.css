@@ -1,0 +1,206 @@
+@import "tailwindcss";
+
+@custom-variant active (&:where(.active, .active *));
+
+@font-face {
+  font-family: "nunito";
+  src: url("assets/fonts/Nunito/Nunito-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "sans-nunito";
+  src: url("assets/fonts/Nunito_Sans/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf");
+}
+
+.recipes-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+.hero {
+  max-width: 110rem;
+  margin-inline: auto;
+}
+.hero::after {
+  content: "";
+
+  background-image: url("assets/images/pattern-squiggle-1.svg");
+  animation-delay: 0.3s;
+  @apply absolute top-0 -z-1 h-full w-full bg-contain bg-no-repeat md:-top-20 xl:-top-50;
+}
+@media (width >= 768px) {
+  .hero::after {
+    background-size: cover;
+  }
+}
+
+@theme {
+  --font-nunito: "nunito";
+  --font-sansNunito: "sans-nunito";
+  --color-neutral-900: #163a34;
+  --color-neutral-600: #395b52;
+  --color-neutral-300: #d0dcd9;
+  --color-neutral-200: #e0e6e3;
+  --color-neutral-100: #f6f5f1;
+  --color-neutral-0: #ffffff;
+
+  --color-orange-500: #fe9f68;
+
+  --color-teal-500: #49ac9b;
+  --breakpoint-xxs: 480px;
+  --color-indigo-500: #697ddb;
+  --animate-reavealUp: reveal-up 700ms both;
+  --animate-slideInLeft: slideInLeft 700ms both;
+  --animate-zoomIn: zoomIn 700ms both;
+  --animate-fadeUp: fadeSlideUp 0.7s ease-out both;
+  --animate-fadeUp-alter: fadeSlideUpAlter 0.8s ease-out both;
+  --animate-bounceUp: fadeBounceUp 0.8s ease-out both;
+
+  @keyframes reveal-up {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  @keyframes slideInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes zoomIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  @keyframes fadeSlideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fadeSlideUpAlter {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fadeBounceUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    50% {
+      transform: translateY(-5px);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+/* Ocultar scrollbar pero permitir scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE, Edge */
+  scrollbar-width: none; /* Firefox */
+}
+@utility xl-container {
+  width: min(90%, 90rem);
+  margin-inline: auto;
+}
+@utility md-container {
+  width: min(90%, 80rem);
+  margin-inline: auto;
+}
+@utility sm-container {
+  width: min(80%, 90rem);
+  margin-inline: auto;
+}
+
+@utility text-1 {
+  font-size: clamp(3.25rem, 2.8099rem + 1.8779vw, 4.5rem);
+  line-height: 1.1;
+  letter-spacing: -2px;
+}
+@utility text-2 {
+  font-size: clamp(2.5rem, 2.3239rem + 0.7512vw, 3rem);
+  line-height: 1.2;
+  letter-spacing: -2px;
+}
+@utility text-3 {
+  font-size: 2rem;
+  line-height: 1.3;
+  letter-spacing: -1px;
+}
+@utility text-4 {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  letter-spacing: -1px;
+}
+@utility text-5 {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  letter-spacing: -0.5px;
+}
+@utility text-6 {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  letter-spacing: -0.04px;
+}
+@utility text-7 {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  letter-spacing: -0.03px;
+}
+@utility text-8 {
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: -0.03px;
+}
+@utility text-9 {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  letter-spacing: -0.03px;
+}
+
+@media (width >= 1024px) {
+  .nav-item.active::after,
+  .nav-item:hover::after {
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 2.5px;
+    border-radius: 1px;
+    background-color: #fe9f68;
+  }
+}
