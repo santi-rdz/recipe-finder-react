@@ -1,10 +1,16 @@
 export default function ChevronIcon({ className }) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" fill="none" viewBox="0 0 20 21">
+    <svg
+      className={className}
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="21"
+      fill="none"
+      viewBox="0 0 20 21"
+    >
       <path
         fill="#163A34"
         fillRule="evenodd"
-        className={className}
         d="M10 14.31a.95.95 0 0 1-.673-.279L3.613 8.317a.951.951 0 1 1 1.346-1.346L10 12.01l5.04-5.04a.951.951 0 1 1 1.348 1.346l-5.715 5.714a.95.95 0 0 1-.673.28Z"
         clipRule="evenodd"
       />

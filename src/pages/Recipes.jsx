@@ -141,9 +141,10 @@ function FilterDrop({ children, id, activeFilter, setActiveFilter, options, acti
     <div ref={dropRef} className="relative md:flex-[50%] lg:w-48 lg:flex-none">
       <button
         onClick={handleShowMenu}
-        className="bg-neutral-0 text-7 flex w-full cursor-pointer items-center justify-center gap-2 rounded-md px-4 py-2.5 hover:ring-[1.5px] md:justify-between"
+        className="group bg-neutral-0 text-7 flex w-full cursor-pointer items-center justify-center gap-2 rounded-md px-4 py-2.5 hover:ring-[1.5px] md:justify-between"
       >
-        {children} <ChevronIcon />
+        {children}{" "}
+        <ChevronIcon className={`${isMenuActive ? "rotate-180" : "rotate-0"} transition-transform duration-300`} />
       </button>
       <DropMenuBox className="absolute top-14 left-0 z-99 w-full gap-1 md:w-[125%]" showMenu={isMenuActive}>
         {options.map((op, i) => (
