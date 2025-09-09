@@ -42,7 +42,7 @@ export default function RecipeDetails() {
   return (
     <div className="fixed inset-0 z-99 bg-black/40">
       <div
-        className={`fixed left-0 h-[95%] w-full overflow-x-auto rounded-t-4xl bg-neutral-100 p-6 duration-300 lg:py-10 ${isMounted ? "bottom-0 opacity-100" : "-bottom-20 opacity-0"}`}
+        className={`fixed left-0 h-[95%] w-full overflow-x-auto rounded-t-4xl bg-neutral-100 py-6 duration-300 lg:py-10 ${isMounted ? "bottom-0 opacity-100" : "-bottom-20 opacity-0"}`}
       >
         <RecipeHeader title={title} />
         <main className="xl-container sm:sm-container lg:md-container mt-10 grid grid-cols-1 justify-center gap-5 pb-8 lg:grid-cols-2 lg:gap-10 lg:pb-16">
