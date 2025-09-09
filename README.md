@@ -13,7 +13,7 @@
 <img  height="1000" alt="recipes" src="https://github.com/user-attachments/assets/8cb1ebcf-0da3-4fb4-bf36-3537f185d0dd" />
 
 ### Recipe Page
-<img height="1000" alt="recipes" src="https://github.com/user-attachments/assets/f0bfcebd-4f33-4932-ab41-4a2a0edfd1da" />
+![F4384B01-90F3-4D9A-A8E6-7D5AC0D396E0](https://github.com/user-attachments/assets/55192402-df89-49f4-a2e1-668f2a0c46e9)
 
 
 
