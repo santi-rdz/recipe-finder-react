@@ -3,9 +3,12 @@
 ## Live view: [Site](https://rdz-recipe-finder-react.netlify.app/)
 
 ## Overview
+### Home Page
 <img  height="1000" alt="localhost_5173_" src="https://github.com/user-attachments/assets/19877a74-a4e0-41a7-91b3-339e82340115" />
+### About Page
 <img  height="1000" alt="abaout" src="https://github.com/user-attachments/assets/fe17dfda-2b51-4cd8-997e-10811781f507" />
-<img width="3336" height="1000" alt="recipes" src="https://github.com/user-attachments/assets/8cb1ebcf-0da3-4fb4-bf36-3537f185d0dd" />
+### Recipes Page
+<img  height="1000" alt="recipes" src="https://github.com/user-attachments/assets/8cb1ebcf-0da3-4fb4-bf36-3537f185d0dd" />
 
 
 Challenge: [Recipe Finder Website](https://www.frontendmentor.io/challenges/recipe-finder-website--Ui-TZTPxN)
