@@ -1,12 +1,48 @@
-# React + Vite
+# Recipe Finder Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Challenge: [Recipe Finder Website](https://www.frontendmentor.io/challenges/recipe-finder-website--Ui-TZTPxN)
 
-## Expanding the ESLint configuration
+This project is built using **React** and **Tailwind CSS**, following good practices for components and responsive design.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Technologies Used
+
+- **React** (v18)  
+- **Tailwind CSS** (v3)  
+- **React Router** (for navigation between pages)  
+- **Vite** (fast development bundler and environment)  
+
+---
+
+## Project Goals
+
+1. Create a **responsive interface** that works on mobile, tablet, and desktop.  
+2. Allow users to **search recipes** by name or ingredients.  
+3. Display results in a **clear and attractive layout**, using cards or lists.  
+4. Implement **hover and focus interactions** for better user experience.  
+5. Build reusable **React components** for scalability and maintainability.  
+
+---
+
+## Features
+
+- **Search input** with real-time filtering of recipes.  
+- **Recipe cards** showing recipe image, name, and short info.  
+- **Responsive layout** using Tailwind’s Grid and Flex utilities.  
+- **Modal or details page** for viewing full recipe information.  
+- **Accessible focus and hover states** for inputs and buttons.  
+
+---
+
+## Notes
+
+- The project uses **Tailwind utilities** for rapid styling and responsive design.  
+- Animations like hover effects and modal transitions are implemented using **CSS transitions**.  
+- State management is handled using **React useState and useEffect** hooks.  
+- The app is fully client-side
+
+---
+
