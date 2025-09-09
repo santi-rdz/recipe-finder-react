@@ -20,7 +20,7 @@ export default function Recipe({ recipe, activeView = "grid", index }) {
     <li
       ref={ref}
       style={{ animationDelay: `${index * 0.03}s` }}
-      className={`${activeView === "stack" ? "flex-col gap-4 sm:h-auto sm:flex-row sm:p-4 lg:gap-8" : "flex-col"} ${isVisible && isLoaded ? "animate-bounceUp" : ""} bg-neutral-0 shadow-m group flex space-y-4 rounded-xl p-2`}
+      className={`${activeView === "stack" ? "flex-col gap-4 sm:h-auto sm:flex-row sm:p-4 lg:gap-8" : "flex-col"} ${isVisible && isLoaded ? "animate-bounceUp" : "opacity-0"} bg-neutral-0 shadow-m group flex space-y-4 rounded-xl p-2`}
     >
       <figure
         className={`${activeView === "stack" ? "sm:h-full sm:w-[200px] sm:shrink-0 lg:w-[250px]" : ""} relative overflow-hidden rounded-lg`}
