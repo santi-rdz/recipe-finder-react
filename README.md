@@ -12,6 +12,10 @@
 ### Recipes Page
 <img  height="1000" alt="recipes" src="https://github.com/user-attachments/assets/8cb1ebcf-0da3-4fb4-bf36-3537f185d0dd" />
 
+### Recipe Page
+<img height="1000" alt="recipes" src="https://github.com/user-attachments/assets/f0bfcebd-4f33-4932-ab41-4a2a0edfd1da" />
+
+
 
 Challenge: [Recipe Finder Website](https://www.frontendmentor.io/challenges/recipe-finder-website--Ui-TZTPxN)
 
