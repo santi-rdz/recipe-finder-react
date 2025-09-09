@@ -12,6 +12,7 @@ import TextHighlight from "../components/TextHighlight";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 import TwoSectionsBox from "../components/TwoSectionsBox";
 import Footer from "../components/CTA";
+import { useState } from "react";
 
 const features = [
   { icon: carrotIcon, title: "Whole-food recipes", description: "Each dish uses everyday, unprocessed ingredients." },
@@ -42,6 +43,7 @@ export default function HomePage() {
 }
 
 function HeroSection() {
+  const [isLoaded, setIsLoaded] = useState(false);
   return (
     <div className="">
       <Section className="relative z-10 space-y-10 lg:space-y-16" applyWidth={false}>
@@ -67,9 +69,10 @@ function HeroSection() {
         <picture className="hero after:animate-fadeUp-alter relative block">
           <source media="(width >= 768px)" srcSet={CtaImgLarge} />
           <img
+            onLoad={() => setIsLoaded(true)}
             src={CtaImg}
             style={{ animationDelay: "0.3s" }}
-            className="animate-zoomIn md-container ring-neutral-0 z-10 rounded-xl ring-6 md:ring-8 lg:ring-14"
+            className={`${isLoaded ? "animate-zoomIn" : "opacity-0"} md-container ring-neutral-0 z-10 rounded-xl ring-6 md:ring-8 lg:ring-14`}
             alt=""
           />
         </picture>
