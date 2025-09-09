@@ -1,15 +1,18 @@
+import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
+import { useState } from "react";
+
 import MetaData from "./MetaData";
 import ButtonCTA from "../components/ButtonCTA";
 
 import servingIcon from "../assets/images/icon-servings.svg";
 import clockIcon from "../assets/images/icon-prep-time.svg";
 import cookIcon from "../assets/images/icon-cook-time.svg";
-import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 import useRecipeContext from "../hooks/useRecipeContext";
 
 export default function Recipe({ recipe, activeView = "grid", index }) {
   const { setCurrRecipe } = useRecipeContext();
   const [ref, isVisible] = useIntersectionObserver({ threshold: 0 });
+  const [isLoaded, setIsLoaded] = useState(false);
 
   //prettier-ignore
   const { id, image: { large }, overview, prepMinutes, cookMinutes, servings, title, slug,} = recipe;
@@ -17,7 +20,7 @@ export default function Recipe({ recipe, activeView = "grid", index }) {
     <li
       ref={ref}
       style={{ animationDelay: `${index * 0.03}s` }}
-      className={`${activeView === "stack" ? "flex-col gap-4 sm:h-auto sm:flex-row sm:p-4 lg:gap-8" : "flex-col"} ${isVisible ? "animate-bounceUp" : ""} bg-neutral-0 shadow-m group flex space-y-4 rounded-xl p-2`}
+      className={`${activeView === "stack" ? "flex-col gap-4 sm:h-auto sm:flex-row sm:p-4 lg:gap-8" : "flex-col"} ${isVisible && isLoaded ? "animate-bounceUp" : ""} bg-neutral-0 shadow-m group flex space-y-4 rounded-xl p-2`}
     >
       <figure
         className={`${activeView === "stack" ? "sm:h-full sm:w-[200px] sm:shrink-0 lg:w-[250px]" : ""} relative overflow-hidden rounded-lg`}
@@ -25,6 +28,7 @@ export default function Recipe({ recipe, activeView = "grid", index }) {
         <img
           src={large}
           alt=""
+          onLoad={() => setIsLoaded(true)}
           className={`${activeView === "stack" ? "xxs:h-90 h-74 sm:h-full" : "xxs:h-50 h-40 sm:h-65 md:h-74 lg:h-60 xl:h-82"} w-full object-cover transition-transform duration-300 ease-in group-hover:scale-110`}
         />
         {activeView === "grid" && (
